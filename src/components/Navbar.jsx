@@ -58,7 +58,7 @@ const Navbar = () => {
           <div className="flex items-center gap-4">
             <button 
               onClick={() => setIsCartOpen(true)}
-              className="relative w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-primary hover:border-primary transition-all duration-300 group"
+              className="hidden lg:flex relative w-12 h-12 rounded-full bg-white/5 border border-white/10 items-center justify-center text-white hover:bg-primary hover:border-primary transition-all duration-300 group"
             >
               <ShoppingCart size={20} />
               {cartCount > 0 && (
@@ -115,6 +115,19 @@ const Navbar = () => {
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* Mobile Floating Cart Button */}
+      <button
+        onClick={() => setIsCartOpen(true)}
+        className="lg:hidden fixed bottom-6 right-6 w-14 h-14 rounded-full bg-primary flex items-center justify-center text-white shadow-[0_0_20px_rgba(255,77,45,0.4)] z-50 transition-transform active:scale-95"
+      >
+        <ShoppingCart size={24} />
+        {cartCount > 0 && (
+          <span className="absolute -top-1 -right-1 w-6 h-6 bg-white text-primary text-[10px] font-bold flex items-center justify-center rounded-full shadow-lg border border-primary">
+            {cartCount}
+          </span>
+        )}
+      </button>
     </nav>
   );
 };

@@ -11,12 +11,12 @@ const Hero = () => {
   const scale = useTransform(scrollY, [0, 500], [1, 1.1]);
 
   return (
-    <section className="relative min-h-[110vh] flex items-center overflow-hidden pt-20">
+    <section className="relative min-h-[110vh] flex items-center overflow-hidden pt-32 lg:pt-20">
       {/* Background Accents */}
       <div className="absolute top-[-10%] right-[-10%] w-[60%] h-[60%] bg-primary/10 blur-[150px] rounded-full pointer-events-none" />
       <div className="absolute bottom-[-10%] left-[-10%] w-[50%] h-[50%] bg-secondary/5 blur-[120px] rounded-full pointer-events-none" />
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 relative z-10 mt-10 lg:mt-0">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           
           {/* Left Content */}
