@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ShoppingCart, IndianRupee, Flame, Star, Minus, Plus } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 
 const ItemDetailsModal = () => {
   const { selectedItem, setSelectedItem, addToCart } = useCart();
+
+  useEffect(() => {
+    if (selectedItem) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [selectedItem]);
 
   if (!selectedItem) return null;
 
@@ -27,7 +38,7 @@ const ItemDetailsModal = () => {
             animate={{ y: 0 }}
             exit={{ y: "100%" }}
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
-            className="fixed bottom-0 left-0 right-0 bg-card rounded-t-[3rem] border-t border-white/10 z-[101] overflow-hidden max-h-[90vh]"
+            className="fixed bottom-0 left-0 right-0 bg-card rounded-t-[3rem] border-t border-white/10 z-[101] overflow-y-auto max-h-[90vh]"
           >
             <div className="container mx-auto px-6 py-12 relative">
               <button 
