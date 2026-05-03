@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Star, MapPin, IndianRupee, ArrowRight, Phone } from 'lucide-react';
+import heroImg from '../assets/images/hero.png';
 
 const Hero = () => {
   const { scrollY } = useScroll();
@@ -93,7 +94,7 @@ const Hero = () => {
               className="relative z-10 w-full max-w-[650px]"
             >
               <img 
-                src="/src/assets/images/hero.png" 
+                src={heroImg} 
                 alt="Signature Dish" 
                 className="w-full h-auto drop-shadow-[0_50px_80px_rgba(0,0,0,0.8)] filter brightness-110 contrast-110"
                 onError={(e) => { e.target.src = '/placeholderimg.png'; }}

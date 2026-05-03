@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import signatureImg from '../assets/images/signature.png';
 
 const SignatureSection = () => {
   const { scrollYProgress } = useScroll();
@@ -73,7 +74,7 @@ const SignatureSection = () => {
                 <div className="absolute inset-0 bg-primary/20 blur-[100px] rounded-full" />
                 <motion.img 
                   style={{ rotate }}
-                  src="/src/assets/images/signature.png" 
+                  src={signatureImg} 
                   alt="Signature Chicken Lollipop"
                   className="w-full h-auto drop-shadow-[0_40px_60px_rgba(0,0,0,0.8)] relative z-10"
                   onError={(e) => { e.target.src = '/placeholderimg.png'; }}

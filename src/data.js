@@ -3,6 +3,13 @@ export const categories = [
   "Chinese Noodles", "Chinese Rice", "Snacks & Starters", "Momos", "Combos"
 ];
 
+import heroImg from "./assets/images/hero.png";
+import butterChickenImg from "./assets/images/butter-chicken.png";
+import signatureImg from "./assets/images/signature.png";
+import masalaChaiImg from "./assets/images/masala-chai.png";
+import comboImg from "./assets/images/combo.png";
+import nonvegFeastImg from "./assets/images/nonveg-feast.png";
+
 export const menuItems = [
   {
     id: 1,
@@ -11,7 +18,7 @@ export const menuItems = [
     price: "180",
     description: "Wok-tossed noodles with tender chicken and seasonal veggies.",
     tags: ["Popular", "Spicy"],
-    image: "/src/assets/images/hero.png"
+    image: heroImg
   },
   {
     id: 2,
@@ -20,7 +27,7 @@ export const menuItems = [
     price: "320",
     description: "Rich and creamy tomato-based curry with succulent chicken pieces.",
     tags: ["Signature", "Mild"],
-    image: "/src/assets/images/butter-chicken.png"
+    image: butterChickenImg
   },
   {
     id: 3,
@@ -47,7 +54,7 @@ export const menuItems = [
     price: "280",
     description: "Juicy chicken wings shaped like lollipops, fried to perfection.",
     tags: ["Popular"],
-    image: "/src/assets/images/signature.png"
+    image: signatureImg
   },
   {
     id: 6,
@@ -65,7 +72,7 @@ export const menuItems = [
     price: "30",
     description: "Traditional spiced Indian tea.",
     tags: ["Classic"],
-    image: "/src/assets/images/masala-chai.png"
+    image: masalaChaiImg
   },
   {
     id: 8,
@@ -130,7 +137,7 @@ export const combos = [
     price: "499",
     items: ["2 Veg Rolls", "1 Paneer Butter Masala", "2 Naan", "1 Coke"],
     description: "Perfect for a duo who loves veggies.",
-    image: "/src/assets/images/combo.png"
+    image: comboImg
   },
   {
     id: "non-veg-combo",
@@ -138,6 +145,6 @@ export const combos = [
     price: "799",
     items: ["1 Butter Chicken", "2 Chicken Biryani", "4 Garlic Naan", "1 Coke 1.25L"],
     description: "The ultimate treat for meat lovers.",
-    image: "/src/assets/images/nonveg-feast.png"
+    image: nonvegFeastImg
   }
 ];
